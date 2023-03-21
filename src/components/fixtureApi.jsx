@@ -26,7 +26,6 @@ function Fixture() {
     
   }, [competencia, dia, enlace]);
 
-  let nombreCompetencia 
   const competenciaHandler = (e) => {
     setCompetencia(e.target.value);
   };
@@ -64,7 +63,7 @@ function Fixture() {
         </div>
       ) : (  
 
-          datos.length === 0 ? <div><h1>No hay partidos en la competencia elegida :(</h1><h2>Probá cambiando de competencia o día</h2></div>  :
+          datos.length === 0 ? <div><h1 className='titulo'>No hay partidos en la competencia elegida </h1><h2 className='titulo'>Probá cambiando de competencia o día</h2></div>  :
       <>
           {datos.map(dato => (
             <Partido
